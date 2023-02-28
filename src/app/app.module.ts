@@ -18,7 +18,6 @@ import { MatchInteractionComponent } from './components/match-interaction/match-
 import { Ctm001002Component } from './components/ctm001002/ctm001002.component';
 import { ExtTextInteractionComponent } from './components/ext-text-interaction/ext-text-interaction.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +31,7 @@ import { ExtTextInteractionComponent } from './components/ext-text-interaction/e
     Graphicalinteraction12Component,
     MatchInteractionComponent,
     Ctm001002Component,
-    ExtTextInteractionComponent
+    ExtTextInteractionComponent,
   ],
   // imports: [
   //   BrowserModule,
