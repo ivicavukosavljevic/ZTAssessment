@@ -1,0 +1,117 @@
+.card {
+    margin: 30px 0 2px 60px;
+    height: 280px;
+    border-radius: 15px;
+    border: 2.2px solid #0C747E;
+}
+
+.box {
+    margin: 130px 0 0 440px;
+    height: 350px;
+    width: 46rem;
+    padding: 2px;
+    border: 2.2px solid #0C747E;
+    border-radius: 15px;
+}
+
+.row .mt-1 .mb-3::placeholder {
+    color: #0C747E;
+}
+
+input {
+    accent-color: #0C747E;
+}
+
+.card-header {
+    background-color: #0C747E;
+    color: #FFF;
+}
+
+span img {
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-size: 10px;
+}
+
+.card-header span {
+    margin-left: 14.5rem;
+}
+
+.row .col-md-8 img {
+    margin-left: 22rem;
+}
+
+
+.choices a {
+    text-decoration: none;
+    color: #0C747E;
+    font-size: 12px;
+    border: 2px dashed #0C747E;
+    border-radius: 20px;
+    margin: 0 0 0 1rem;
+    padding: 6px;
+}
+
+.done img {
+    width: 65px;
+    height: 35px;
+    margin: 0 0 0 19.5rem;
+}
+
+.done2 img {
+    width: 65px;
+    height: 35px;
+    margin: 0.5rem 0 0 32rem;
+}
+
+div .choice2 {
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 0 5px 0;
+    padding: 3px 0 0 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #0C747E;
+    border-radius: 3px;
+
+}
+
+.inputQuestion input {
+    width: 101%;
+    font-size: 16px;
+    padding: 6px;
+    color: #0C747E;
+    border: 2px dotted #0C747E;
+    border-radius: 7px;
+}
+
+.choiceQuestion {
+    font-size: 14px;
+    color: #0C747E;
+    font-weight: 600;
+}
+
+.choiceQue {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: #83C5BE;
+    border-radius: 50px;
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

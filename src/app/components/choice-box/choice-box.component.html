@@ -1,0 +1,117 @@
+<!-- FIRST SCREEN -->
+<div class="box" *ngIf="ConditionDone1">
+  <div class="content">
+    <div class="card" style="width: 38rem;">
+      <div class="card-header">
+        <p class="modal-title fs-9" id="ModalLabel">CHOICE INTERACTION
+          <span>QUESTIONS | RESPONSE <a type="button" (click)="deleteContent()">|<img
+                src="./assets/delete.png"></a></span>
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row mt-1 mb-3">
+          <input type="text" class="promt" placeholder="Define Prompt" [(ngModel)]="questions">
+          <div class="row mt-2">
+            <div class="choiceText">
+              <ng-container *ngFor="let value of InputArray; let i = index">
+                <div *ngIf="i<8" class="row">
+                  <div class="col-md-1 mt-1  radio-toolbar">
+                    <input type="radio" name="choices">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" class="choice2" [(ngModel)]="value.value" #name="ngModel" name="value{{i}}"
+                      placeholder="CHOICE">
+                  </div>
+                  <div class="col-md-8 trash">
+                    <a type="button" (click)="deleteChoice1(value)"><img src="./assets/trash.png" height="18px"></a>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 choices">
+            <a type="button" class="choice" (click)="addChoice()"><img src="./assets/Icons/add.png" height="12px"> Add
+              Choice</a>
+          </div>
+
+          <div class="col-md-5 done">
+            <a type="button"><img src="./assets/done.png" (click)="doneFirst()"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECOND SCREEN -->
+<div class="box" *ngIf="ConditionDone2">
+  <div class="content">
+    <div class="card" style="width: 38rem;">
+      <div class="card-header">
+        <p class="modal-title fs-9" id="ModalLabel">CHOICE INTERACTION
+          <span>QUESTIONS | RESPONSE <a type="button" (click)="deleteContent2()">|<img
+                src="./assets/delete.png"></a></span>
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row mt-1 mb-3">
+          <div class="inputQuestion">
+            <input type="text" placeholder="&nbsp;&nbsp;Please define the correct response below"
+              [(ngModel)]="questionsAdd">
+          </div>
+
+          <div class="row mt-2">
+            <ng-container *ngFor="let value of InputArray; let i = index">
+              <div class="row ngDiv">
+                <div class="col-md-1 mt-1">
+                  <input type="radio" name="choices">
+                </div>
+                <div class="col-md-3">
+                  <div class="choiceText">
+                    {{value.value}}
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="done2">
+          <a type="button"><img src="./assets/done.png" (click)="doneSecond()"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- THIRD SCREEN -->
+<div class="box" *ngIf="ConditionDone3">
+  <div class="content">
+    <div class="card" style="width: 38rem;">
+      <div class="card-body">
+        <P class="choiceQuestion">{{questions}}&nbsp;{{questionsAdd}}</P>
+        <div class="row mt-2">
+          <div class="inputValue">
+            <ng-container *ngFor="let value of InputArray; let i = index">
+              <div class="row ngDiv">
+                <div class="col-md-1 mt-1">
+                  <input type="radio" name="choices">
+                </div>
+                <div class="col-md-3">
+                  <div class="choiceText">
+                    {{value.value}}
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

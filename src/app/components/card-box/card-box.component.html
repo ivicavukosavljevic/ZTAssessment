@@ -1,0 +1,155 @@
+<!-- FIRST SCREEN -->
+
+<div class="content" *ngIf="ConditionDone1">
+  <div class="card" style="width: 45rem;">
+    <div class="card-header">
+      <p class="modal-title fs-9" id="ModalLabel">GAP MATCH INTERACTION
+        <span>QUESTIONS | RESPONSE <a type="button" (click)="deleteContent()">|<img
+              src="./assets/delete.png"></a></span>
+      </p>
+
+    </div>
+    <div class="card-body">
+      <div class="row mt-1 mb-3">
+        <input type="text" class="promt" placeholder="Define Prompt">
+      </div>
+
+      <div class="row choices">
+        <a type="button" class="choice" (click)="addChoice()"><img src="./assets/Icons/add.png" height="12px"> Add
+          Choice</a>
+        <div class="choiceText">
+          <ng-container *ngFor="let value of InputArray; let i = index">
+            <div *ngIf="i<8" class="ngDiv">
+              <input type="text" class="choice2" [(ngModel)]="value.value" #name="ngModel" name="value{{i}}"
+                placeholder="CHOICE">
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="paragraph">
+        <input type="text"
+          [style]="styleOne && {'font-weight':'bold'} || styleTwo && {'font-style':'italic'} || styleThree && {'text-decoration': 'underline'}  || styleFour && {'text-align': 'left'} || styleFive && {'text-align': 'right'}"
+          placeholder="Lorem ipsum dolor sit amet , Consectetur adipiscing, elit sed do" [(ngModel)]="inputValue">
+      </div>
+      <div class="done">
+        <a type="button" (click)="content2()"><img src="./assets/done.png"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBottomBox" *ngIf="hideBottomContent">
+    <div class="card-bottom" style="width: 45rem;">
+      <div class="card-body">
+        <div class="text-icons">
+          <p class="texts">
+            <span>
+              <a type="button" (click)="hideContent()"><img src="./assets/Icons/cross.png" height="12px"></a>
+            </span><br>
+            EDIT TEXT
+          </p>
+
+          <div class="symbol">
+            <a type="button" (click)="boldText()"><img src="./assets/Icons/bita.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button" (click)="italicText()"><img src="./assets/Icons/italic.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button" (click)="underlineText()"><img src="./assets/Icons/underline.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/icon5.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/icon4.png" height="20px"></a>
+            <img src="./assets/Icons/Line 7.png" height="30px">
+            <a type="button"><img src="./assets/Icons/icon6.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/gallery.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/music.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/icon3.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/icon2.png" height="20px"></a>
+            <img src="./assets/Icons/Line 7.png" height="30px">
+            <a type="button"><img src="./assets/Icons/icon1.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/normal.png" height="20px"></a>
+            <img src="./assets/Icons/Line 7.png" height="30px">
+            <a type="button" (click)="leftText()"><img src="./assets/Icons/dash1.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button" (click)="rightText()"><img src="./assets/Icons/dash2.png" height="20px"></a>
+            <img src="./assets/Icons/Line 12.png" height="20px">
+            <a type="button"><img src="./assets/Icons/icon7.png" height="30px"></a>
+            <a type="button"><img src="./assets/Icons/arrow.png" height="20px"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SECOND SCREEN -->
+<div class="content2" *ngIf="ConditionDone2">
+  <div class="card" style="width: 45rem;">
+    <div class="card-header">
+      <p class="modal-title fs-9" id="ModalLabel">GAP MATCH INTERACTION
+        <span>QUESTIONS | RESPONCE <a type="button" (click)="deleteContent()">|<img
+              src="./assets/delete.png"></a></span>
+      </p>
+    </div>
+    <div class="card-body">
+      <div class="row choices">
+        <div class="choiceText">
+          <div *ngFor="let value of InputArray;  let i = index">
+            {{value.value}}
+          </div>
+        </div>
+      </div>
+      <div class="paragraph2">
+        <input type="text" [(ngModel)]="addQuestion"
+          placeholder="&nbsp;&nbsp;Please add one or more gaps to the  text in question mode.">
+      </div>
+      <p class="paraValue"
+        [style]="styleOne && {'font-weight':'bold'} || styleTwo && {'font-style':'italic'} || styleThree && {'text-decoration': 'underline'}  || styleFour && {'text-align': 'left'} || styleFive && {'text-align': 'right'}">
+        {{inputValue}}&nbsp;{{addQuestion}}</p>
+      <div class="done-btn">
+        <a type="button" (click)="content3()"><img src="./assets/done.png"></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<!-- THIRD SCREEN -->
+
+<div class="content3" *ngIf="ConditionDone3">
+  <div class="card" style="width: 45rem;">
+    <div class="card-header">
+      <p class="modal-title fs-9" id="ModalLabel">GAP MATCH INTERACTION
+        <span>QUESTIONS | RESPONCE <a type="button" (click)="deleteContent()">|<img
+              src="./assets/delete.png"></a></span>
+      </p>
+    </div>
+    <div class="card-body">
+      <div class="row choices">
+        <div class="choiceText">
+          <div *ngFor="let value of InputArray;  let i = index" (click)="answer(value)">
+            {{value.value}}
+          </div>
+        </div>
+      </div>
+      <div class="para">
+        <p id="values"
+          [style]="styleOne && {'font-weight':'bold'} || styleTwo && {'font-style':'italic'} || styleThree && {'text-decoration': 'underline'}  || styleFour && {'text-align': 'left'} || styleFive && {'text-align': 'right'}">
+          {{inputValue}}&nbsp;{{addQuestion}} -- <ng-container *ngIf="dotShow">........................</ng-container>
+          {{answerValue}}</p>
+      </div>
+      <div class="done-btn2">
+        <a type="button"><img src="./assets/done.png"></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,22 +19,18 @@
     <!-- <app-graphical-interaction></app-graphical-interaction> -->
     <!-- <app-hottext-interaction></app-hottext-interaction> -->
     <!-- interactions component go here  -->
-    <div class="options-container">
-      <div id="printViewBurger">
-        <div>
-          <img class="options" src="assets/view.png" alt="" />
-          <img class="options" src="assets/printer.png" alt="" />
-          <img
-            (click)="openBurgerMenu()"
-            class="options"
-            src="assets/burger.png"
-            alt=""
-          />
-        </div>
-
+  
+  <!-- interactions component go here  -->
+  <div class="options-container">
+    <div id="printViewBurger">
+      <div>
+        <img class="options" src="assets/view.png" alt="">
+        <img class="options" src="assets/printer.png" alt="">
+        <img (click)="openBurgerMenu()" class="options" src="assets/burger.png" alt="">
         <app-admin-hover-card></app-admin-hover-card>
       </div>
     </div>
-    <img id="saveButton" src="assets/SaveButton.png" alt="" />
+  </div>
+    <img id="saveButton" src="assets/SaveButton.png" alt="">
   </body>
 </html>
