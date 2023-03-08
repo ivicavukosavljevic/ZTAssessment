@@ -8,6 +8,7 @@ import { AdminHoverCardComponent } from './components/admin-hover-card/admin-hov
 })
 export class AppComponent {
   title = 'ZTAssessment';
+  screen=1;
   @ViewChild(AdminHoverCardComponent) adminPanel!: AdminHoverCardComponent;
 
   openBurgerMenu() {

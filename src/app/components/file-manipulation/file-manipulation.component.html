@@ -2,7 +2,7 @@
 <div class="container" *ngIf="Condition1" ng-app="">
   <div class="main-box">
     <a class="btn-save" (click)="screen2()">
-      <img src="./assets/file-manipulationIcons/Save-Button.png" />
+      <img class="save-btn" src="./assets/Icons/savebtn.png" />
     </a>
   </div>
   <div class="header-box">
@@ -43,7 +43,7 @@
 <div class="container" *ngIf="Condition2" ng-app="">
   <div class="main-box2">
     <a class="btn-save" (click)="screen3()">
-      <img src="./assets/file-manipulationIcons/Save-Button.png" />
+      <img class="save-btn" src="./assets/Icons/savebtn.png" />
     </a>
   </div>
   <div class="header-box">
@@ -56,7 +56,7 @@
       <img src="/assets/delete.png" />
     </a>
   </div>
-  <a class="browse-btn2">
+  <a class="browse-btn2" (click)="browseFiles()">
     <img src="./assets/Browse.png" />
   </a>
   <div class="selected-files2">
@@ -70,7 +70,7 @@
 <div class="container" *ngIf="Condition3" ng-app="">
   <div class="main-box2">
     <a class="btn-save" (click)="screen3()">
-      <img src="./assets/file-manipulationIcons/Save-Button.png" />
+      <img class="save-btn" src="./assets/Icons/savebtn.png" />
     </a>
   </div>
   <div class="header-box">
@@ -79,7 +79,7 @@
       <img src="/assets/delete.png" />
     </a>
   </div>
-  <a class="browse-btn2">
+  <a class="browse-btn2" (click)="browseFiles()">
     <img src="./assets/Browse.png" />
   </a>
   <div class="selected-files2">

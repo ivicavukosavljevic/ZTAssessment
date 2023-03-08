@@ -282,3 +282,7 @@ input[type="text"]:focus:focus-visible {
 -webkit-autofill {
   color: #0c747e;
 }
+
+.save-btn {
+  max-width: 30px;
+}
