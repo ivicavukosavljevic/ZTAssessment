@@ -28,12 +28,13 @@
     [class.italic-text]="styleItalic"
     [class.underline-text]="styleUnderline"
   />
-  <a class="browse-btn" (click)="browseFiles()">
+
+  <a class="browse-btn" type="file" (click)="browseFiles()">
     <img src="./assets/Browse.png" />
   </a>
   <div class="selected-files">
     <label class="sel-data-label">{{
-      selectedFile ? selectedFile.name : "No File Selected"
+      selectedFile ? selectedFile : "No File Selected"
     }}</label>
   </div>
 </div>
@@ -61,7 +62,7 @@
   </a>
   <div class="selected-files2">
     <label class="sel-data-label">{{
-      selectedFile ? selectedFile.name : "No File Selected"
+      selectedFile ? selectedFile : "No File Selected"
     }}</label>
   </div>
 </div>
@@ -83,9 +84,7 @@
     <img src="./assets/Browse.png" />
   </a>
   <div class="selected-files2">
-    <label class="sel-data-label">{{
-      selectedFile ? selectedFile.name : "No File Selected"
-    }}</label>
+    <label class="sel-data-label">{{ selectedFile }}</label>
   </div>
 </div>
 

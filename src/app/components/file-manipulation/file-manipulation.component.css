@@ -195,7 +195,7 @@ input[type="text"]:focus:focus-visible {
 
 .sel-data-label {
   position: absolute;
-  width: 175px;
+  width: 440px;
   height: 27px;
   margin: 5px 0 0 20px;
   font-family: "Roboto";

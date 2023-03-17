@@ -29,9 +29,9 @@ export class FileManipulationComponent {
   styleFour: boolean = false;
   styleFive: boolean = false;
   value: string = '';
-  selectedFile = {
-    name: 'No File Selected',
-  };
+  selectedFile: string = 'No File Selected';
+
+  currentInput: any;
 
   deleteTextDecoration() {
     this.styleBold = false;
@@ -46,7 +46,9 @@ export class FileManipulationComponent {
   browseFiles() {
     let input = document.createElement('input');
     input.type = 'file';
-    input.onchange = (_) => {};
+    input.onchange = () => {
+      this.selectedFile = input.value.replace(/^.*[\\\/]/, '');
+    };
     input.click();
   }
 

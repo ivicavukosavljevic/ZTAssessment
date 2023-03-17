@@ -60,7 +60,7 @@ import { ExportSectionComponent } from './components/export-section/export-secti
   //   ]),
   // ],
 
-  // imports: [BrowserModule, AppRoutingModule, FormsModule, DragDropModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, DragDropModule],
   providers: [],
   bootstrap: [AppComponent],
 })

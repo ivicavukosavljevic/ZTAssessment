@@ -16,10 +16,13 @@
     </a>
   </div>
   <input
+    [ngClass]="{ active: isInputActive }"
+    (click)="isInputActive = true; isInputActive2 = false"
+    (blur)="isInputActive = true; isInputActive2 = false"
     type="text"
     name="inputprompt"
     #text
-    (keyup)="getValue(text.value)"
+    (keyup)="getValuePrompt(text.value)"
     placeholder="Define Prompt"
     onfocus="this.placeholder = ''"
     onblur="this.placeholder = 'Define Prompt'"
@@ -29,14 +32,20 @@
     [class.underline-text]="styleUnderline"
   />
   <textarea
+    [ngClass]="{ active: isInputActive2 }"
+    (click)="isInputActive2 = true; isInputActive = false"
+    (blur)="isInputActive2 = true; isInputActive = false"
     class="input-text"
     type="text"
     name="inputprompt"
     #text
-    (keyup)="getValue(text.value)"
+    (keyup)="getValueText(text.value)"
     placeholder="Lorem ipsum dolor sit amet...."
     onfocus="this.placeholder = ''"
     onblur="this.placeholder = 'Lorem ipsum dolor sit amet....'"
+    [class.bold-text]="styleBold"
+    [class.italic-text]="styleItalic"
+    [class.underline-text]="styleUnderline"
   ></textarea>
 </div>
 
@@ -69,11 +78,12 @@
     type="text"
     name="inputprompt"
     #text
-    (keyup)="getValue(text.value)"
+    (keyup)="getValueText(text.value)"
     placeholder="Lorem ipsum dolor sit amet...."
     onfocus="this.placeholder = ''"
     onblur="this.placeholder = 'Lorem ipsum dolor sit amet....'"
-  ></textarea>
+    >{{ valueText }}</textarea
+  >
 </div>
 
 <!-- Third menu: -->
@@ -86,7 +96,7 @@
   <div class="header-box">
     <label class="box-title">ITEM_1</label>
   </div>
-  <label class="label-last">Lorem ipsum dolor sit amet....</label>
+  <label class="label-last">{{ valueText }}</label>
 </div>
 
 <!-- Symbols -->

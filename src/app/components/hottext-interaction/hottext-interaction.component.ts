@@ -27,16 +27,27 @@ export class HottextInteractionComponent {
   styleUnderline: boolean = false;
   styleFour: boolean = false;
   styleFive: boolean = false;
-  value: string = '';
+  valuePrompt: string = '';
+  valueText: string = '';
+  isInputActive: boolean = false;
+  isInputActive2: boolean = false;
+  // promptSelector = document.getElementsByClassName('.prompt');
+  // inputTextSelector = document.getElementsByClassName('.input-text');
 
   deleteTextDecoration() {
     this.styleBold = false;
     this.styleItalic = false;
     this.styleUnderline = false;
   }
-  getValue(val: string) {
-    this.value = val;
-    if (!this.value) this.deleteTextDecoration();
+
+  getValuePrompt(val: string) {
+    // const activePrompt = document.addEventListener('click', this.boldtext2);
+    this.valuePrompt = val;
+    if (!this.valuePrompt) this.deleteTextDecoration();
+  }
+  getValueText(val2: string) {
+    this.valueText = val2;
+    if (!this.valueText) this.deleteTextDecoration();
   }
 
   browseFiles() {
@@ -47,6 +58,12 @@ export class HottextInteractionComponent {
   }
 
   screen2() {
+    console.log(
+      this.valuePrompt,
+      this.valueText,
+      'isInputActive= ' + this.isInputActive,
+      'isInputActive2 = ' + this.isInputActive2
+    );
     this.Condition1 = false;
     this.Condition2 = true;
     this.autosave = false;
@@ -54,6 +71,12 @@ export class HottextInteractionComponent {
   }
 
   screen3() {
+    console.log(
+      this.valuePrompt,
+      this.valueText,
+      'isInputActive= ' + this.isInputActive,
+      'isInputActive2 = ' + this.isInputActive2
+    );
     this.Condition2 = false;
     this.Condition3 = true;
   }
@@ -69,15 +92,39 @@ export class HottextInteractionComponent {
     this.autosave = false;
   }
 
+  boldUnbold() {
+    this.styleBold = !this.styleBold;
+  }
+
+  italicStraight() {
+    this.styleItalic = !this.styleItalic;
+  }
+
+  underline() {
+    this.styleUnderline = !this.styleUnderline;
+  }
+
   boldText() {
-    if (this.value) this.styleBold = !this.styleBold;
+    if ((this.isInputActive = true)) {
+      if (this.valuePrompt) this.boldUnbold();
+    } else if ((this.isInputActive2 = true)) {
+      if (this.valueText) this.boldUnbold();
+    }
   }
 
   italicText() {
-    if (this.value) this.styleItalic = !this.styleItalic;
+    if ((this.isInputActive = true)) {
+      if (this.valuePrompt) this.italicStraight();
+    } else if ((this.isInputActive2 = true)) {
+      if (this.valueText) this.italicStraight();
+    }
   }
 
   underlineText() {
-    if (this.value) this.styleUnderline = !this.styleUnderline;
+    if ((this.isInputActive = true)) {
+      if (this.valuePrompt) this.underline();
+    } else if ((this.isInputActive2 = true)) {
+      if (this.valueText) this.underline();
+    }
   }
 }
