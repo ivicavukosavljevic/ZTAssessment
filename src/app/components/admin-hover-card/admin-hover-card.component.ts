@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AdminHoverCardComponent {
   open: boolean = false;
+  testmakeropen: boolean = false;
+  testnav:boolean = false;
+  hovercard: boolean = false;
+  navwarning: boolean = false;
+  ordering:boolean=false;
 }

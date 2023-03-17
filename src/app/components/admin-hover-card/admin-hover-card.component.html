@@ -7,3 +7,220 @@
     <li><img src="../../../assets/adminHover/response.png">Response Properties</li>
   </ul>
 </aside>
+
+
+<!-- Test Taker screens -->
+<aside class="testaker" *ngIf="testmakeropen">
+  <div class="headingele">
+    <div class="heading">TEST TAKER TOOLS </div>
+    <img src="../../../assets/cross.png" alt="cross" class="cross" (click)="testmakeropen=false"/>
+  </div>
+
+  <div class="toggle-1">
+  <div class="toggle">
+  <div class="bodyele">
+    <ul>
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Answer Eliminator</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Answer Masking</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Area Masking</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Calculator</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Calculator BODMAS</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Scientific Calculator</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Highlighter</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Line Reader</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Magnifier</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>Zoom</span>
+      </li>
+
+      <li>
+        <input type="checkbox" class="checkbox">
+        <span>APIP Text to Speech</span>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+</aside>
+
+<!-- Test Navigator -->
+<aside class="testnav" *ngIf="testnav">
+  <div class="headingele1">
+    <div class="heading1">TEST NAVIGATOR</div>
+    <img src="../../../assets/cross.png" alt="cross" class="cross" (click)="testnav=false"/>
+  </div>
+
+  <div class="togglenew">
+    <div class="bodyele">
+      <ul>
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Enable Review Screen</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Enable Mark for Review</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Information item usage</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<!-- Admin Hovercard -->
+<aside class="hovercard" *ngIf="hovercard">
+  <div class="section1">
+    <div class="bodyele2">
+      <ul>
+        <li>
+          <img src="../../../assets/redcross.png" alt="cross" class="cross1" (click)="hovercard=false"/>
+        </li>
+        <li class="item2">
+          <img src="../../../assets/adminHover/setting.png" alt="setting">
+          <span>Item Properties</span>
+        </li>
+
+        <li class="item3">
+          <img src="../../../assets/adminHover/arrow-down.png" alt="setting">
+          <span>Test Navigator</span>
+        </li>
+
+        <li class="item4">
+          <img src="../../../assets/adminHover/anchor1.png" alt="setting">
+          <span>Navigator Warnings</span>
+        </li>
+
+        <li class="item5">
+          <img src="../../../assets/adminHover/briefcase1.png" alt="setting">
+          <span>Test Taker Tools</span>
+        </li>
+
+        <li class="item6">
+          <img src="../../../assets/adminHover/arrow-pointer1.png" alt="setting">
+          <span>Selection</span>
+        </li>
+
+        <li class="item7">
+          <img src="../../../assets/adminHover/align-center1.png" alt="setting">
+          <span>Ordering</span>
+        </li>
+
+        <li class="item8">
+          <img src="../../../assets/adminHover/stopwatch1.png" alt="setting">
+          <span>Item Session Control</span>
+        </li>
+
+        <li class="item9">
+          <img src="../../../assets/adminHover/clock1.png" alt="setting">
+          <span>Time Limits</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<!-- Navigator Warnings -->
+<aside class="navwarning" *ngIf="navwarning">
+  <div class="headingele2">
+    <div class="heading2">
+      NAVIGATION WARNINGS
+    </div>
+    <img src="../../../assets/cross.png" alt="cross" class="cross" (click)="navwarning=false"/>
+  </div>
+
+  <div class="togglenew1">
+    <div class="bodyele">
+      <ul>
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Display End Test Warning</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Display Next Part Warning</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Display Next Section Warning</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Hide Timed Section Warning</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Display Unanswered Warning</span>
+        </li>
+  
+        <li>
+          <input type="checkbox" class="checkbox">
+          <span>Do not show alert on timeout</span>
+        </li>
+      </ul>
+    </div>
+    </div>
+</aside>
+
+<!-- Ordering -->
+<aside class="ordering" *ngIf="ordering">
+  <div class="sec3">
+    <div class="heading3">ORDERING</div>
+    <img src="../../../assets/cross.png" alt="cross" class="cross" (click)="ordering=false"/>
+  </div>
+
+  <div class="bodyele4">
+    <ul>
+      <li>
+        <span>Shuffle</span>
+        <input type="checkbox" class="checkbox1">
+      </li>
+    </ul>
+  </div>
+</aside>
+

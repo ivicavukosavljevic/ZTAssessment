@@ -1,0 +1,83 @@
+<!-- 1st Screen -->
+<div class="container" *ngIf="Condition1" ng-app="">
+  <div class="card" style="width: 37.8rem;">
+    <div id="head">SLIDER INTERACTION
+       <span>
+
+       <a href=""><img src="assets/delete.png" style="position: relative;top: -2px;" height="13px"></a>
+       </span>
+   </div>
+   <div id="body1">
+       <span style="position: relative;top:-12px">Define Prompt</span>
+ 
+   </div>
+   <div id="body2">
+    <div class="slider-container">
+      <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+      <div style="position: relative;top: 3px;margin-right: 10px"class="slider-labels">
+        <span class="slider-label">0</span>
+        <span class="slider-label">100</span>
+      </div>
+      <p>Current value: {{ sliderValue }}</p> 
+    </div>
+   
+    <a (click)="screen2()">
+        <img src="assets/Icons/savebtn.png" style="position:relative;float:right;margin-right: -5px;top: 65px;" width="30px" class="autosave1" *ngIf="autosave">
+    </a>
+</div>
+</div>
+</div>
+
+<!-- <img id="saveButton" src="assets/SaveButton.png" alt="" *ngIf="savebtn"> -->
+
+
+<!-- 2nd Screen -->
+<div class="container" *ngIf="Condition2" ng-app="">
+<div class="card" style="width: 37.8rem;">
+ <div id="head">SLIDER INTERACTION
+    <span>
+    
+    
+    <a href=""><img src="assets/delete.png" style="position: relative;top: -2px;" height="13px"></a>
+    </span>
+</div>
+<div id="body-1">
+  <img src="assets/Icons/symbol.png" style="margin-bottom: 10px; vertical-align: middle;" width="20px">
+  <span style="position: relative;top:-1px; vertical-align: middle;">Please Define the correct response below</span>
+</div>
+
+  <div id="body2">
+    <div class="slider-container">
+      <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+      <div style="position: relative;top: 3px;margin-right: 10px"class="slider-labels">
+        <span class="slider-label">0</span>
+        <span class="slider-label">100</span>
+      </div>
+      <p>Current value: {{ sliderValue }}</p> 
+   </div>
+   <a (click)="screen3()">
+      <img src="assets/Icons/savebtn.png" style="position:relative;float:right;margin-right:-5px;top:65px;" width="30px" class="autosave2">
+   </a>
+</div>
+</div>
+</div>
+<!-- 
+<img id="saveButton1" src="assets/SaveButton.png" alt="" *ngIf="savebtn1"> -->
+
+<!-- 3rd Screen -->
+<div class="content2" *ngIf="Condition3">
+<div class="card-header-1"style="width: 37.8rem;">
+  <div id="body-1-1">
+    <h5>Question Body</h5>
+  </div>
+  <div id="body2">
+    <div class="slider-container">
+      <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+      <div style="position: relative;top: 3px;margin-right: 10px"class="slider-labels">
+        <span class="slider-label">0</span>
+        <span class="slider-label">100</span>
+      </div>
+      <p>Current value: {{ sliderValue }}</p> 
+  </div>
+</div>
+</div>

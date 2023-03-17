@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { OrderinteractionComponent } from './components/orderinteraction/orderinteraction.component';
 import { AdminHoverCardComponent } from './components/admin-hover-card/admin-hover-card.component';
+import { SliderInteractionComponent } from './components/slider-interaction/slider-interaction.component';
 import { FileManipulationComponent } from './components/file-manipulation/file-manipulation.component';
 import { GraphicalInteractionComponent } from './components/graphical-interaction/graphical-interaction.component';
 import { HottextInteractionComponent } from './components/hottext-interaction/hottext-interaction.component';
@@ -18,6 +19,9 @@ import { Ctm001002Component } from './components/ctm001002/ctm001002.component';
 import { ExtTextInteractionComponent } from './components/ext-text-interaction/ext-text-interaction.component';
 import { ChoiceBoxComponent } from './components/choice-box/choice-box.component';
 import { CardBoxComponent } from './components/card-box/card-box.component';
+import { AssociateInteractionComponent } from './components/associate-interaction/associate-interaction.component';
+import { ImportSectionComponent } from './components/import-section/import-section.component';
+import { ExportSectionComponent } from './components/export-section/export-section.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { CardBoxComponent } from './components/card-box/card-box.component';
     SideBarComponent,
     AdminHoverCardComponent,
     OrderinteractionComponent,
+    SliderInteractionComponent,
     FileManipulationComponent,
     GraphicalInteractionComponent,
     HottextInteractionComponent,
@@ -35,22 +40,25 @@ import { CardBoxComponent } from './components/card-box/card-box.component';
     ExtTextInteractionComponent,
     ChoiceBoxComponent,
     CardBoxComponent,
+    AssociateInteractionComponent,
+    ImportSectionComponent,
+    ExportSectionComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DragDropModule,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: 'file-manipulation', component: FileManipulationComponent },
-      { path: 'order-interaction', component: OrderinteractionComponent },
-      {
-        path: 'graphical-interaction',
-        component: GraphicalInteractionComponent,
-      },
-      { path: 'hottext-interaction', component: HottextInteractionComponent },
-    ]),
-  ],
+  // imports: [
+  //   BrowserModule,
+  //   AppRoutingModule,
+  //   DragDropModule,
+  //   FormsModule,
+  //   RouterModule.forRoot([
+  //     { path: 'file-manipulation', component: FileManipulationComponent },
+  //     { path: 'order-interaction', component: OrderinteractionComponent },
+  //     {
+  //       path: 'graphical-interaction',
+  //       component: GraphicalInteractionComponent,
+  //     },
+  //     { path: 'hottext-interaction', component: HottextInteractionComponent },
+  //   ]),
+  // ],
 
   // imports: [BrowserModule, AppRoutingModule, FormsModule, DragDropModule],
   providers: [],

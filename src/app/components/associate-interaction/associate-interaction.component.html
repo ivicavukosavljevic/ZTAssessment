@@ -1,0 +1,155 @@
+<!-- 1st Screen -->
+<div class="container" *ngIf="Condition1" ng-app="">
+    <div class="card" style="width: 45rem;"></div>
+    <div class="card-header">
+       <p class="header-title">Associate Interaction
+          <span>QUESTION | RESPONSE | <a type="button" (click)="dismissbox()"><img src="./assets/delete.png"></a></span>
+       </p>
+    </div>
+    <div class="card-body">
+       <div class="border-box">
+          <div class="choice-box">
+             <div *ngFor='let item of choices;let i = index'>
+                <input type="radio" [checked]="item.selected"  (change)="radioChecked(item.id)">
+                <input type="text" value='{{item.name}}' />
+                <span (click)="deleteChoice(item.id)" class="trash-span"><img src="assets/deletegreen.png"
+                      class="trash-icon" alt=""></span>
+             </div>
+             <button type="button" class="add-button" *ngIf="choices.length<4" (click)="addChoice()"><img
+                   src="assets/Icons/add.png" height="12px"> Add Choice</button>
+          </div>
+          <div class="box1"></div>
+          <div class="line"></div>
+          <div class="box2"></div>
+       </div>
+       <a (click)="screen2()" class="save-btn">
+          <img src="assets/Icons/savebtn.png">
+       </a>
+    </div>
+ </div>
+ 
+ 
+ 
+ <!-- Symbols -->
+ <div class="cardBottomBox" *ngIf="bottomSymbol">
+    <div class="card-bottom" style="width: 45rem;">
+       <div class="card-body">
+          <div class="text-icons">
+             <p class="texts">
+                <span>
+                   <a type="button"><img src="assets/Icons/cross.png" height="12px" id="cross" (click)="dismiss()"></a>
+                </span><br>
+                EDIT TEXT
+             </p>
+ 
+             <div class="symbol">
+                <a type="button" (click)="boldText()"><img src="./assets/Icons/bita.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button" (click)="italicText()"><img src="./assets/Icons/italic.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button" (click)="underlineText()"><img src="./assets/Icons/underline.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/icon5.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/icon4.png" height="20px"></a>
+                <img src="./assets/Icons/Line 7.png" height="30px">
+                <a type="button"><img src="./assets/Icons/icon6.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/gallery.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/music.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/icon3.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/icon2.png" height="20px"></a>
+                <img src="./assets/Icons/Line 7.png" height="30px">
+                <a type="button"><img src="./assets/Icons/icon1.png" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/normal.png" height="20px"></a>
+                <img src="./assets/Icons/Line 7.png" height="30px">
+                <a type="button"><img src="./assets/Icons/dash1.png" (click)="Dash1()" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/dash2.png" (click)="Dash2()" height="20px"></a>
+                <img src="./assets/Icons/Line 12.png" height="20px">
+                <a type="button"><img src="./assets/Icons/icon7.png" height="30px"></a>
+                <a type="button"><img src="./assets/Icons/arrow.png" height="20px"></a>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ 
+ 
+ <!-- 2nd Screen -->
+ <div class="content2" *ngIf="Condition2" ng-app="">
+    <div class="card-header-1">
+       <p class="header-title">Associate Intercation
+          <span>QUESTION | RESPONSE | <a type="button" (click)="invisiblebox()"><img
+                   src="./assets/delete.png"></a></span>
+       </p>
+    </div>
+    <div class="card-body">
+       <div class="row mt-1">
+          <p class="prompt-1" ng-bind="inputprompt">
+             <img src="./assets/Icons/symbol.png" class="isymbol">
+             Please define the correct association pair below
+          </p>
+       </div>
+       <div class="row mt-2">
+          <p class="prompt-2" ng-bind="inputprompt">
+             <img src="./assets/Icons/symbol.png" class="isymbol">
+             You may make as many assocition pairs as you want
+          </p>
+       </div>
+       <div class="border-box2">
+          <div class="choice-box">
+             <div *ngFor='let item of choices;let i = index'>
+                <input type="radio" [checked]="item.selected"   (change)="radioChecked(item.id)">
+                <input type="text" value='{{item.name}}' />
+                <span (click)="deleteChoice(item.id)" class="trash-span"><img src="assets/deletegreen.png"
+                      class="trash-icon" alt=""></span>
+             </div>
+             <button type="button" class="add-button" *ngIf="choices.length<4" (click)="addChoice()"><img
+                   src="assets/Icons/add.png" height="12px"> Add Choice</button>
+          </div>
+          <div class="box1"></div>
+          <div class="line"></div>
+          <div class="box2"></div>
+       </div>
+ 
+    <div class="right-1">
+ 
+    </div>
+       <a (click)="screen3()">
+        <img src="assets/Icons/savebtn.png" class="autosave">
+       </a>
+    </div>
+ </div>
+ 
+ 
+ 
+ 
+ <!-- 3rd Screen -->
+ <div class="content2" *ngIf="Condition3" cdkDropListGroup>
+    <div class="card-header-1">
+       <p class="header-title">ITEM 1
+    </div>
+    <div class="card-body">
+ 
+    <div class="border-box3">
+        <div class="choice-box">
+             <div *ngFor='let item of choices;let i = index'>
+                <input type="radio" [checked]="item.selected"   (change)="radioChecked(item.id)">
+                <input type="text" value='{{item.name}}' />
+                <span (click)="deleteChoice(item.id)" class="trash-span"><img src="assets/deletegreen.png"
+                    class="trash-icon" alt=""></span>
+            </div>
+             <button type="button" class="add-button" *ngIf="choices.length<4" (click)="addChoice()"><img
+                src="assets/Icons/add.png" height="12px"> Add Choice</button>
+        </div>
+        <div class="box1"></div>
+        <div class="line"></div>
+        <div class="box2"></div>
+    </div>
+    </div>
+</div>

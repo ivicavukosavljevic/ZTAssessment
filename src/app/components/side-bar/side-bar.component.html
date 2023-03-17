@@ -7,8 +7,9 @@
     <button class="deliveries"><img class="deliveries-img" src="assets/sideBarIcons/Deliveries.png" alt=""></button>
     <button class="results"><img class="results-img" src="assets/sideBarIcons/Results.png" alt=""></button>
   </div>
-
-  <div class="sideBar expanded" [ngStyle]="expandedSideBar" *ngIf="false">
+  <div *ngIf="pencilb">
+  <div class="sideBar expanded" [ngStyle]="expandedSideBar" *ngIf="expanded">
+   
     <ul>
       <div id="commonInteraction" >
         <p class="sideBar-headings" (click)="openCommonInteraction()">COMMON INTERACTION <img class="arrow-1"  src="../../../assets/sideBarIcons/arrow.png"></p>
@@ -21,35 +22,35 @@
             <img
               src="../../../assets/common interaction Icons/Choice.png"
               alt="Choice"
-            />
+             (click)="choice()" />
           </div>
 
           <div>
             <img
               src="../../../assets/common interaction Icons/ExtTest.png"
               alt="ExtTest"
-            />
+           (click)="external()" />
             <img
               src="../../../assets/common interaction Icons/FileUpload.png"
               alt="FileUpload"
-            />
+           (click)="fileupload()" />
           </div>
           <div>
             <img
               src="../../../assets/common interaction Icons/GapMatch.png"
               alt="GapMatch.png"
-            />
+            (click)="gapMatch()" />
             <img
               src="../../../assets/common interaction Icons/HotText.png"
               alt="HotText"
-            />
+           (click)="hottext()" />
           </div>
 
           <div>
             <img
               src="../../../assets/common interaction Icons/Match.png"
               alt="Match"
-            />
+            (click)="matchint()" />
             <img
               src="../../../assets/common interaction Icons/Media.png"
               alt="Media"
@@ -59,7 +60,7 @@
             <img
               src="../../../assets/common interaction Icons/Order.png"
               alt="Order"
-            />
+           (click)="orderint()" />
             <img
               src="../../../assets/common interaction Icons/Slider.png"
               alt="Slider"
@@ -81,18 +82,25 @@
       </div>
     </ul>
   </div>
+</div>
   
 
+<div *ngIf="pencilf">
 <div class="sideBar expanded" [ngStyle]="expandedSideBar" *ngIf="expanded">
-  
-  <div class="folder-item"><img class="folder" src="/assets/file.png"><p class="item">Item</p><img class="arrow-5" src="../../../assets/sideBarIcons/arrow.png"></div>
+  <div class="folder-item"><img class="folder" src="/assets/file.png"><p class="item">Item</p><img class="arrow-6" src="../../../assets/sideBarIcons/arrow.png"></div>
   <div class="folder-item">
     <img class="folder" src="/assets/file.png">
     <p class="item">QTI Example Test</p>
-    <img class="arrow-5"  src="../../../assets/sideBarIcons/arrow.png">
-
+    <img class="arrow-6"  src="../../../assets/sideBarIcons/arrow.png"  (click)="dropdow()" >
   </div>
+    <div class="folder-item" *ngIf="dropDown"><p class="folderitems"  (click)="folderitem()">{{val}}</p></div>
   
+  <div class="folder-item1" *ngIf="newfolder1">
+    <img class="folder" src="/assets/file.png" >
+    <p class="item">New Folder</p>
+    <img class="arrow-6"  src="../../../assets/sideBarIcons/arrow.png" *ngIf="false">
+  </div>
+  <div class="toggle-1">
   <div class="toggle">
 
     <div class="row-1" >
@@ -137,9 +145,11 @@
       </div>
 
   </div>
-  
+</div>
 
 </div>
+</div>
+
 
 <!---------------------------------Tests------------------------------------------------------------------------------------------------------>
 
@@ -250,33 +260,33 @@
     </div>
     <div class="lessons">
       <div class="l-lessons">
-      <label for="check" class="l-label" title="">Luxembourg neigbourhoo.</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">Japanese capital (Order in..</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">Languages of Europe (Ass..</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">Match Countries and lang</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">H.G. Walls: The time ma00</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">Baudelaire: A une dame cr..</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
-      <div class="l-lessons">
-      <label for="check" class="l-label" title="">Richard III</label>
-      <input type="checkbox" id="check" class="l-check" >
-      </div>
+        <label for="check1" class="l-label" title="">Luxembourg neigbourhoo.</label>
+        <input type="checkbox" id="check1" class="l-check" (click)="update(0,'Luxembourg neigbourhoo.')">
+        </div>
+        <div class="l-lessons">
+        <label for="check2" class="l-label" title="">Japanese capital (Order in..</label>
+        <input type="checkbox" id="check2" class="l-check" (click)="update(1,'Japanese capital (Order in..')">
+        </div>
+        <div class="l-lessons">
+        <label for="check3" class="l-label" title="">Languages of Europe (Ass..</label>
+        <input type="checkbox" id="check3" class="l-check" (click)="update(2,'Languages of Europe (Ass..')">
+        </div>
+        <div class="l-lessons">
+        <label for="check4" class="l-label" title="">Match Countries and lang</label>
+        <input type="checkbox" id="check4" class="l-check" (click)="update(3,'Match Countries and lang')">
+        </div>
+        <div class="l-lessons">
+        <label for="check5" class="l-label" title="">H.G. Walls: The time ma00</label>
+        <input type="checkbox" id="check5" class="l-check" (click)="update(4,'H.G. Walls: The time ma00')">
+        </div>
+        <div class="l-lessons">
+        <label for="check6" class="l-label" title="">Baudelaire: A une dame cr..</label>
+        <input type="checkbox" id="check6" class="l-check" (click)="update(5,'Baudelaire: A une dame cr..')">
+        </div>
+        <div class="l-lessons">
+        <label for="check7" class="l-label" title="">Richard III</label>
+        <input type="checkbox" id="check7" class="l-check" (click)="update(6,'Richard III')">
+        </div>
      
     </div>
 

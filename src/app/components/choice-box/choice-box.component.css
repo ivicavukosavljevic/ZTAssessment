@@ -1,12 +1,16 @@
 .card {
     margin: 30px 0 2px 60px;
     height: 280px;
-    border-radius: 15px;
+    border-radius: 12px;
     border: 2.2px solid #0C747E;
+  
 }
 
 .box {
-    margin: 130px 0 0 440px;
+    margin: 0;
+    position: relative;
+    top: 180px;
+    left: 500px;
     height: 350px;
     width: 46rem;
     padding: 2px;
@@ -34,7 +38,7 @@ span img {
 }
 
 .card-header span {
-    margin-left: 14.5rem;
+    margin-left: 12rem;
 }
 
 .row .col-md-8 img {
@@ -55,12 +59,14 @@ span img {
 .done img {
     width: 65px;
     height: 35px;
+    border-radius: 12px;
     margin: 0 0 0 19.5rem;
 }
 
 .done2 img {
     width: 65px;
     height: 35px;
+    border-radius: 12px;
     margin: 0.5rem 0 0 32rem;
 }
 

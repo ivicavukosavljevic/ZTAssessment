@@ -38,7 +38,7 @@ export class ChoiceBoxComponent {
 
   doneFirst() {
     this.ConditionDone1 = false;
-    this.ConditionDone2 = true;
+    this.ConditionDone2 = true;   
   }
 
   doneSecond() {
@@ -47,4 +47,14 @@ export class ChoiceBoxComponent {
   }
 
   doneThird() { }
+
+  firstScreen(){
+    this.ConditionDone1 = true;
+    this.ConditionDone2 = false;   
+  }
+
+  secondScreen(){
+    this.ConditionDone1 = false;
+    this.ConditionDone2 = true;   
+  }
 }

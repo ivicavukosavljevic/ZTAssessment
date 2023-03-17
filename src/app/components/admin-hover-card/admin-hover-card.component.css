@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+
 ul {
   list-style: none;
   background-color: white;
@@ -17,7 +19,7 @@ ul li img {
   margin-right: 1em;
 }
 
-li:nth-child(4) {
+.options li:nth-child(4) {
   background-color: var(--clr-dark);
   color: white;
 }
@@ -28,3 +30,251 @@ li:nth-child(4) {
   text-align: right;
   cursor: pointer;
 }
+
+/* Test Taker component */
+
+.cross{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  right:13px;
+}
+
+.headingele{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+padding: 10px 10px 10px 24px;
+gap: 10px;
+position: absolute;
+width: 357px;
+height: 50px;
+left: 0px;
+top: 0px;
+background: #0C747E;
+}
+
+.heading{
+width: 295px;
+height: 30px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.testtaker ul li {
+  border-bottom: none;
+}
+
+.toggle{
+  position: relative;
+  top: 15px;
+  max-height: 300px;
+  /* width: 220px; */
+  overflow-y: scroll;  
+}
+
+/* width */
+.toggle::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+.toggle::-webkit-scrollbar-thumb {
+  background: #83C5BE; 
+  border-radius: 50px;
+}
+/* Handle on hover */
+.toggle::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.bodyele{
+  margin-left: 30px;
+  width: 310px;
+}
+
+.checkbox{
+  margin-right: 30px;
+}
+
+.checkbox:checked{
+  background-color: #03311b;
+}
+
+/* Test Navigator */
+.headingele1{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 10px 10px 24px;
+gap: 10px;
+position: absolute;
+width: 357px;
+height: 50px;
+left: 0px;
+top: 0px;
+background: #0C747E;
+}
+
+.heading1{
+  width: 295px;
+height: 30px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.togglenew{
+  position: relative;
+  top: 15px;
+  max-height: 120px;
+  /* width: 220px; */
+  overflow-y: scroll;  
+}
+
+/* width */
+.togglenew::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+.togglenew::-webkit-scrollbar-thumb {
+  background: #83C5BE; 
+  border-radius: 50px;
+}
+/* Handle on hover */
+.togglenew::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+/* Admin Hovercard */
+.section1{
+  position: relative;
+width: 258px;
+height: 558px;
+background: #FFFFFF;
+border-radius: 0px 0px 8px 8px;
+border-color: #87a9ad;
+}
+
+.cross1{
+  position: relative;
+  left: 220px;
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.item2:hover,.item3:hover,.item4:hover,.item5:hover,.item6:hover,.item7:hover,.item8:hover,.item9:hover{
+  background-color: #0C747E;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation warnings */
+.headingele2{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 10px 10px 24px;
+gap: 10px;
+position: absolute;
+width: 357px;
+height: 50px;
+left: 0px;
+top: 0px;
+background: #0C747E;
+}
+
+.heading2{
+  width: 295px;
+height: 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.navwarning ul li{
+  border-bottom: none;
+}
+
+.togglenew1{
+  position: relative;
+  top: 15px;
+  max-height: 220px;
+  /* width: 220px; */
+  overflow-y: scroll;  
+}
+
+/* width */
+.togglenew1::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+.togglenew1::-webkit-scrollbar-thumb {
+  background: #83C5BE; 
+  border-radius: 50px;
+}
+/* Handle on hover */
+.togglenew1::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Ordering */
+.sec3{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 10px 10px 24px;
+gap: 10px;
+position: absolute;
+width: 300px;
+height: 43px;
+left: 0px;
+top: 0px;
+background: #0C747E;
+}
+
+.heading3{
+  width: 238px;
+height: 23px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.checkbox1{
+  margin-left: 120px;
+}
+
+.bodyele4{
+  margin-left: 30px;
+  width: 250px;
+}
+

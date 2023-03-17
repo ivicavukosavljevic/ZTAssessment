@@ -88,5 +88,14 @@ export class CardBoxComponent {
     this.dotShow = false;
   }
 
+  firstScreen(){
+    this.ConditionDone1 = true;
+    this.ConditionDone2 = false;
+  }
+  secondScreen(){
+    this.ConditionDone1 = false;
+    this.ConditionDone2 = true;
+    this.hideBottomContent = true;
+  }
 }
 

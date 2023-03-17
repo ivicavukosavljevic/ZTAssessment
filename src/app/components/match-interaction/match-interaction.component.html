@@ -2,9 +2,9 @@
     <div id="box" *ngIf="Condition1">
         <div id="head">Match INTERACTION
             <span style="position: absolute;right:10px;">
-                <a href="#c" style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;">QUESTION</a> 
-                <a href="" style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;">RESPONSE</a>
-            <a  type="button" (click)="dismissbox(0)"><img src="./assets/delete.png" style="position: relative;top: 2px;" height="13px"></a>
+                <a style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;" >QUESTION</a> 
+                <a style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;" (click)="save()">RESPONSE</a>
+            <a  type="button" (click)="dismissbox(0)"><img src="./assets/delete.png" style="position: relative;top:-2px;" height="13px"></a>
             </span>
             
         </div>
@@ -46,9 +46,9 @@
 <div id="box" *ngIf="Condition2">
     <div id="head">MATCH INTERACTION
         <span style="position: absolute;right:10px;">
-        <a href="#c" style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;">QUESTION</a> 
-        <a href="" style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;">RESPONSE</a>
-        <a  type="button" (click)="dismissbox(1)"><img src="./assets/delete.png" style="position: relative;top: 2px;" height="13px"></a>
+        <a style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;" (click)="Condition1=true;Condition2=false;">QUESTION</a> 
+        <a style="border-right:0.5px solid #FFFFFF;;height:20px;padding:5px 0px;padding-right:20px;" (click)="Condition1=false;Condition2=false;Condition3=true;">RESPONSE</a>
+        <a  type="button" (click)="dismissbox(1)"><img src="./assets/delete.png" style="position: relative;top: -2px;" height="13px"></a>
         </span>
         
 

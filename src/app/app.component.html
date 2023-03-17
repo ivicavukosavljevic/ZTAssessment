@@ -12,16 +12,25 @@
     <app-side-bar></app-side-bar>
     <!-- **interactions component go here -->
     <router-outlet></router-outlet>
-    <!-- <app-ctm001002 *ngIf="screen==1"></app-ctm001002>
-    <app-ext-text-interaction *ngIf="screen==2"></app-ext-text-interaction>
-    <app-file-manipulation *ngIf="screen==3"></app-file-manipulation>
-    <app-graphical-interaction *ngIf="screen==4"></app-graphical-interaction>
-    <app-graphicalinteraction12 *ngIf="screen==5"></app-graphicalinteraction12>
-    <app-hottext-interaction *ngIf="screen==6"></app-hottext-interaction>
-    <app-orderinteraction *ngIf="screen==7"></app-orderinteraction>
-    <app-match-interaction *ngIf="screen==8"></app-match-interaction>
-    <app-choice-box *ngIf="screen==9"></app-choice-box>
-    <app-card-box *ngIf="screen==10"></app-card-box> -->
+    <app-ctm001002></app-ctm001002>
+    <app-ext-text-interaction *ngIf="ext"></app-ext-text-interaction>
+    <app-file-manipulation *ngIf="file"></app-file-manipulation>
+    <div *ngIf="hide">
+      <app-graphical-interaction
+        *ngIf="screen == 1"
+      ></app-graphical-interaction>
+      <app-graphicalinteraction12
+        *ngIf="screen == 2"
+      ></app-graphicalinteraction12>
+    </div>
+    <app-hottext-interaction *ngIf="hot"></app-hottext-interaction>
+    <app-orderinteraction *ngIf="order"></app-orderinteraction>
+    <app-match-interaction *ngIf="match"></app-match-interaction>
+    <app-choice-box *ngIf="choiceI"></app-choice-box>
+    <app-card-box *ngIf="gap"></app-card-box>
+    <app-associate-interaction *ngIf="false"></app-associate-interaction>
+    <app-import-section *ngIf="false"></app-import-section>
+    <app-export-section *ngIf="false"></app-export-section>
     <!-- <app-orderinteraction></app-orderinteraction> -->
     <!-- <app-file-manipulation></app-file-manipulation> -->
     <!-- <app-graphical-interaction></app-graphical-interaction> -->
@@ -29,14 +38,22 @@
     <!-- interactions component go here  -->
     <div class="options-container">
       <div id="printViewBurger">
-        <div>
-          <img class="options" src="assets/view.png" alt="" />
-          <img class="options" src="assets/printer.png" alt="" />
+        <div class="">
+          <img class="options" src="assets/view.png" (click)="hid()" alt="" />
+          <img class="options" src="assets/printer.png" alt="" hidden />
+          <img
+            class="options1"
+            (click)="pencil()"
+            src="/assets/pencil.png"
+            alt=""
+          />
+          <img class="options" src="/assets/time.png" alt="" />
           <img
             (click)="openBurgerMenu()"
             class="options"
             src="assets/burger.png"
             alt=""
+            hidden
           />
         </div>
 
@@ -47,27 +64,7 @@
       id="saveButton"
       src="assets/SaveButton.png"
       alt=""
-      (click)="
-        screen == 1
-          ? (screen = 2)
-          : screen == 2
-          ? (screen = 3)
-          : screen == 3
-          ? (screen = 4)
-          : screen == 4
-          ? (screen = 5)
-          : screen == 5
-          ? (screen = 6)
-          : screen == 6
-          ? (screen = 7)
-          : screen == 7
-          ? (screen = 8)
-          : screen == 8
-          ? (screen = 9)
-          : screen == 9
-          ? (screen = 10)
-          : (screen = 1)
-      "
+      (click)="screen == 1 ? (screen = 2) : screen == 2"
     />
   </body>
 </html>

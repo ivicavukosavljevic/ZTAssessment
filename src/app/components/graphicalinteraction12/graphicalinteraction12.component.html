@@ -1,76 +1,89 @@
 <!-- 1st Screen -->
-<div class="content1" *ngIf="content1">
+<div class="content1">
     <div class="sec">
     <img src="assets/Icons/file.png" alt="1" class="image1">
     <div class="con">TEST 2</div>
     </div>
-    <div class="header">
+    
+<div style="height:500px;overflow-y: scroll;">
+<div  *ngFor="let t of arr,index as i" >
+    <div class="header" > 
        <div class="left">
-        TESTPART-1
+        TESTPART-{{i+1}}
        </div>
        <div class="right">
         <div class="im3">
         <img src="assets/Icons/settings.png" alt="1" class="img1">
         </div>
         <div class="im1">
-        <img src="assets/Icons/arrowup.png" alt="1" class="img2">
+        <img src="assets/Icons/arrowup.png" (click)="uppart(i)" alt="1" class="img2">
         </div>
         <div class="im2">
-            <img src="assets/Icons/arrowdown.png" alt="1" class="img2">
+            <img src="assets/Icons/arrowdown.png" (click)="downpart(i)" alt="1" class="img2">
         </div>
         <div>
-            <img src="assets/deleteicon.png" alt="1" class="img3" (click)="deletebox()">
+            <img src="assets/deleteicon.png" alt="1" class="img3" (click)="deletetest(i)">
         </div>
        </div>
     </div>
+    <div class="card-body" style="min-height: 230px;">
+    <div *ngFor="let s of arr[i],index as j" style="min-height:fit-content;padding: 9.5px 0px;padding-left: 20px;">
+        <div style="min-height:182px;border-left:3px solid  #0C747E;">
+            <div class="section1" style="width:96%;">
+                Section-{{j+1}}
+                <span style="position:absolute;right:0px;border: 1px solid #0C747E;border-radius: 20px;">
+                    <span>
+                    <img src="assets/Icons/aave.png" class="icons">
+                    <img src="assets/Icons/settinggreen.png" class="icons" style="border-left: 1px solid #0C747E;;border-right: 1px solid #0C747E;">
+                    <img src="assets/Icons/topgreen.png" class="icons" (click)="upscene(i,j)">
+                    <img src="assets/Icons/bottomgreen.png" class="icons" (click)="downscene(i,j)" style="border-left: 1px solid #0C747E;;border-right: 1px solid #0C747E;">
+                    <img src="assets/deletegreen.png" class="icons" (click)="deletescene(i,j)">
+                    </span>
+                </span>
+            </div>
+            <div class="cardbox">
+                <p class="item">Items</p>
+                <div *ngFor="let d of arr[i][j],index as count" style="width:100%;border-bottom: 1px solid #83C5BE;padding:10px 20px ;">{{count+1}}.{{d}}
+                    <span style="position:absolute;right:10px;border: 1px solid #0C747E;border-radius: 20px;">
+                        <span>
+                        <img src="assets/Icons/settinggreen.png" class="iconss" style="border-left: 1px solid #0C747E;;border-right: 1px solid #0C747E;">
+                        <img src="assets/Icons/topgreen.png" class="iconss" (click)="uptext(i,j,count)">
+                        <img src="assets/Icons/bottomgreen.png" class="iconss" style="border-left: 1px solid #0C747E;;border-right: 1px solid #0C747E;" (click)="downtext(i,j,count)">
+                        <img src="assets/deletegreen.png" class="iconss" (click)="deletetext(i,j,count)">
+                        </span>
+                    </span>
+                </div>
+                <div class="box1" (click)="addItem(i,j)">
+                    <img src="assets/Icons/addnew.png" class="addnew">
+                    <p class="text">Add Selected item(s) here.</p>
+                </div>
+            </div>
 
-    <div class="card-body">
-        <div><img src="assets/Icons/sideline.png" class="sideline"></div>
-        <div class="section1">
-            Section-1:
-        </div>
-        <div class="section2">
-            <div class="line">
-                <img src="assets/Icons/aave.png" class="aave">
-            </div>
-            <div class="line">
-                <img src="assets/Icons/settinggreen.png" class="setting">
-            </div>
-            <div class="line">
-                <img src="assets/Icons/topgreen.png" class="topgreen">
-            </div>
-            <div class="line">
-                <img src="assets/Icons/bottomgreen.png" class="bottomgreen">
-            </div>
-            <div>
-                <img src="assets/deletegreen.png" class="deletegreen">
-            </div>
-        </div>
-   
 
-    <div class="card-box">
-        <p class="item">Items</p>
-        <div class="box1" (click)="screen2()">
-            <div> <img src="assets/Icons/addnew.png" class="addnew"></div>
-           <p class="text">Add Selected item(s) here.</p>
-        </div>
-        <div class="button1">
-            <img src="assets/Icons/addnew.png" class="addnew1">
-            <p>New Section</p>
+
         </div>
     </div>
-
-    <div>
-        <div class="button2">
-            <img src="assets/Icons/addnew.png" class="addnew1">
-            <p>New Test Part</p>
-        </div>
+    <br>
+    <div class="button1" (click)="addScene(i)">
+        <img src="assets/Icons/addnew.png" class="addnew1">
+        <p>New Section</p>
     </div>
-</div>
-</div>
+    
+    </div>
 
+
+
+</div>
+<div class="button2" (click)="addtest()" >
+    <img src="assets/Icons/addnew.png" class="addnew1">
+    <p>New Test Part</p>
+    </div>
+    
+</div>
+<div style="height:550px;width:9.5px;background-color:white;position: absolute;top:0px;right:18.5px;"></div>  
+</div>
 <!-- 2nd screen -->
-<div class="content2" *ngIf="content2">
+<!--div class="content2" *ngIf="content2">
     <div class="sec">
         <img src="assets/Icons/file.png" alt="1" class="image1">
         <div class="con">TEST 2</div>
@@ -176,4 +189,4 @@
     <img src="assets/Icons/addnew.png" class="addnew2">
     <p class="text2">New Test Part</p>
 </div>
-</div>
+</div-->

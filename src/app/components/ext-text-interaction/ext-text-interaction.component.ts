@@ -10,6 +10,7 @@ export class ExtTextInteractionComponent {
   imgArea:any[][]=[[]];
   table:any[][][]=[];
   inputprompt="";
+  inputpromptstyle=[false,false,false];
   Active1=1;
   Active2=1;
   Active3=0;
@@ -17,15 +18,8 @@ export class ExtTextInteractionComponent {
   bottomSymbol: boolean = true;
   Condition1: boolean = true;
   Condition2: boolean = true;  
-  styleOne: boolean = false;
-  styleTwo: boolean = false;
-  styleThree: boolean = false;
-  style1: boolean = false;
-  style2: boolean = false;
-  style3: boolean = false;
-  save(){
-    // this.text update in database
-  }
+  
+  
   dismissbox(val:number){             
     if(val==0)this.Condition1=false;
     else this.Condition2=false; 
@@ -36,8 +30,8 @@ export class ExtTextInteractionComponent {
   }
   boldText(){
     if(this.Active2==1){
-    if(this.styleOne==false)this.styleOne=true;
-    else this.styleOne=false}
+    if(this.inputpromptstyle[0]==false)this.inputpromptstyle[0]=true;
+    else this.inputpromptstyle[0]=false}
     else if(this.imgArea[this.Active1][0]=='text'){
       if(this.imgArea[this.Active1][2]==false)this.imgArea[this.Active1][2]=true;
       else this.imgArea[this.Active1][2]=false}
@@ -51,8 +45,8 @@ export class ExtTextInteractionComponent {
 
   italicText(){
     if(this.Active2==1){
-    if(this.styleTwo==false)this.styleTwo=true;
-    else this.styleTwo=false}
+    if(this.inputpromptstyle[1]==false)this.inputpromptstyle[1]=true;
+    else this.inputpromptstyle[1]=false}
     else if(this.imgArea[this.Active1][0]=='text'){
       if(this.imgArea[this.Active1][3]==false)this.imgArea[this.Active1][3]=true;
       else this.imgArea[this.Active1][3]=false}
@@ -93,8 +87,8 @@ this.imgArea.push(["img",img]);
 }
   underlineText(){
     if(this.Active2==1){
-    if(this.styleThree==false)this.styleThree=true;
-    else this.styleThree=false;}
+    if(this.inputpromptstyle[2]==false)this.inputpromptstyle[2]=true;
+    else this.inputpromptstyle[2]=false;}
     else if(this.imgArea[this.Active1][0]=='text'){
       if(this.imgArea[this.Active1][4]==false)this.imgArea[this.Active1][4]=true;
       else this.imgArea[this.Active1][4]=false;}

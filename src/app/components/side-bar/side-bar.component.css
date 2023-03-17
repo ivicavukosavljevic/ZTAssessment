@@ -1,3 +1,4 @@
+
 .sidebarContainer {
   position: relative;
   background-color: red;
@@ -21,6 +22,9 @@ ul {
   align-items: center;
   position: absolute;
   z-index: 2;
+ 
+ min-height: 585px;
+  min-width: 60px;
 }
 
 .expanded {
@@ -39,6 +43,7 @@ ul {
   z-index: 1;
   display: block;
 }
+
 
 .sideBar-headings {
   color: var(--clr-dark);
@@ -95,15 +100,18 @@ p img {
 }
 
 .items,.tests,.testtakers,.groups,.deliveries,.groups,.results{
-  width: 90px;
-  height: 80px;
+  max-width: 100px;
+  max-height: 90px;
   position: relative;
   top: -23px;
   padding: 0;
 
 }
 .items-img,.tests-img,.testtakers-img,.groups-img,.deliveries-img,.groups-img,.results-img{
-  height: 100px;
+  max-width: 90px;
+  min-height: 80px;
+  min-width: 40px;
+  min-height: 40px;
 
 
 }
@@ -132,34 +140,60 @@ p img {
 .folder-item{
   position: relative;
   top:30px;
- padding-left: 85px;
  padding-bottom: 5px;
   display:flex;
   align-items: center;
+  justify-content: flex-start;
   border-bottom: 2px solid #0C747E;
   padding-top: 5px;
-  
-  
+  gap: 8px;
+
 }
+.folder-item1{
+  position: relative;
+  top:30px;
+ padding-bottom: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid #0C747E;
+  padding-top: 5px;
+  gap: 8px;
+
+}
+
 .folder{
-  width: 26px;
-  height: 22px;
+  max-width: 26px;
+  max-height: 22px;
+  margin-left: 80px;
 }
+
 .item{
   margin-bottom: 0;
-  margin-left: 10px;
+
   color: #0C747E;
   font-weight: 600;
   font-size: 20px;
  
 }
 .arrow-5{
-  position: relative;
-  left: 15px;
-  width: 18px;
-  height: 11px;
+  margin-right: 10px;
+  max-width: 18px;
+  max-height: 11px;
+  cursor: pointer;
 }
-
+.arrow-6{
+  margin-right: 10px;
+  max-width: 18px;
+  max-height: 11px;
+  cursor: pointer;
+}
+.arrow-7{
+  margin-right: 10px;
+  max-width: 18px;
+  max-height: 11px;
+  cursor: pointer;
+}
 .row1 img{
   width: 105px;
   height: 75px;
@@ -196,13 +230,32 @@ p img {
   padding: 7px;
   top: 10px;
 }
+.folderitems{
+position: relative;
+left: 120px;
+font-size: 18px;
+font-weight: 600;
+color:#0C747E;
+cursor: pointer;
+
+}
 .toggle{
   position: relative;
-  left: 100px;
   top: 50px;
   max-height: 300px;
- width: 240px;
+ width: 220px;
   overflow-y: scroll;
+  
+  
+}
+.toggle-1{
+  position: relative;
+  top: 20px;
+  min-width: 50px;
+  max-width: 330px;
+  height: 600px;
+  display: flex;
+  justify-content: flex-end;
 }
 .delete-icon{
   position: relative;
@@ -215,26 +268,30 @@ p img {
 
 }
 .delete-img{
-  width: 55px; height: 45px; position: relative; top: -64px; left: 23px;
+  max-width: 55px; max-height: 45px; 
+ 
+  position: relative; 
+  top: -64px; 
+  left: 23px;
 
 }
 .export-img{
-  width: 55px; height: 45px; position: relative; top: -64px; left: 22px;
+  max-width: 55px; max-height: 45px; position: relative; top: -64px; left: 22px;
 }
 .import-img{
-  width: 55px; height: 45px; position: relative; top: -62px; left: 22px;
+  max-width: 55px; max-height: 45px; position: relative; top: -62px; left: 22px;
 }
 .moveto-img{
-  width: 60px; height: 50px; position: relative; top: -66px; left: 20px;
+  max-width: 60px; max-height: 50px; position: relative; top: -66px; left: 20px;
 }
 .newitem-img{
-  width: 62px; height: 52px; position: relative; top: -67px; left: 21px;
+  max-width: 62px; max-height: 52px; position: relative; top: -67px; left: 21px;
 }
 .duplicate-img{
-  width: 65px; height: 55px; position: relative; top: -68px; left: 17px;
+  max-width: 65px; max-height: 55px; position: relative; top: -68px; left: 17px;
 }
 .copyto-img{
-  width: 65px; height: 55px; position: relative; top: -68px; left: 17px;
+  max-width: 65px; max-height: 55px; position: relative; top: -68px; left: 17px;
 }
 .arrow-right{
   width: 35px;
@@ -545,8 +602,6 @@ white-space: nowrap;
   background-color: #0C747E;
 
 }
-
-
 
 
 

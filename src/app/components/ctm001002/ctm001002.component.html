@@ -1,12 +1,15 @@
-<div id="box" hidden>
-    <div id="header"></div>    
+<div id="box" *ngIf="newfolder">
+    <div id="header"><h5 class="header-1">Edit Class</h5></div>   
     <h1 class="label">Label<sup style="color: red;">*</sup></h1>
-    <div id="inputbox">QTI Example Test</div>
+    <input type="text" id="inputbox" placeholder="New Class">
+    
 </div>
-<div id="box">
-    <div id="header"></div>    
+<div *ngIf="editItem1">
+<div id="box" *ngIf="editItem">
+    <div id="header"><h5 class="header-1">Edit Item</h5></div>    
     <h1 class="label">Label<sup style="color: red;">*</sup></h1>
-    <div id="inputbox">QTI Example Test</div>
+    <input type="text" id="inputbox" [placeholder]="val">
     <h1 class="label" style="top: 165px;">Item Model</h1>
     <div id="inputbox" style="top: 167px;font-weight: bold;border:none"><input type="radio" style="accent-color: black;" id="">QTI</div>
+</div>
 </div>
